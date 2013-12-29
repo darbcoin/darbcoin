@@ -39,7 +39,7 @@ To mine with your GPU, create a file called `darbcoin.conf` in `%appdata%/Darbco
     rpcuser=[USERNAME]
     rpcpassword=[PASSWORD]
 
-Then run the Darbcoin client with -server (this is automatically done in `Darbcoin-connect.bat`), which will start a JSON-RPC server on port 3552. Then, pick a Litecoin mining application of your choice ([GUIMiner-scrypt](https://bitcointalk.org/index.php?topic=150331.0) works, make sure to set 'Use stratum' to No), and point it to `localhost:3552` with the username and password you specified in `darbcoin.conf`. It should work, hopefully.
+Then run the Darbcoin client with -server (this is automatically done in `Darbcoin-connect.bat`), which will start a JSON-RPC server on port 3552. ~~Then, pick a Litecoin mining application of your choice ([GUIMiner-scrypt](https://bitcointalk.org/index.php?topic=150331.0) works, make sure to set 'Use stratum' to No), and point it to `localhost:3552` with the username and password you specified in `darbcoin.conf`. It should work, hopefully.~~ Actually, I don't think this works at least at the moment. I have a feeling that cgminer doesn't like working with a network difficulty of 0.00024414. If you can get GPU mining to work, let me know.
 
 License
 -------
