@@ -24,7 +24,7 @@ To build the graphical client (darbcoin-qt):
 
 How to Build (Windows)
 -------
-Don't. It's too hard. Abandon all hope. Use the things compiled using devil voodoo black magic in the `/release` folder.
+Don't. It's too hard. Abandon all hope. Use this release compiled using devil voodoo black magic: [darbcoin-v1-Win.zip] (http://darbcoin.myanimelife.net/darbcoin-v1-Win.zip)
 
 How to Connect
 -------
