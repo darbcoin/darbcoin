@@ -34,6 +34,8 @@ How to Mine
 -------
 You can mine using your CPU with miner built into the client either through the graphical client, or in the command-line client using the command `setgenerate true [# Threads]`.
 
+If you're using the graphical client, you'll want to set Scantime to 1.
+
 To mine with your GPU, create a file called `darbcoin.conf` in `%appdata%/Darbcoin` (Windows) or `~/.darbcoin` (Linux) containing:
 
     rpcuser=[USERNAME]
