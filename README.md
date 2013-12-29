@@ -28,7 +28,7 @@ Don't. It's too hard. Abandon all hope. Use this release compiled using devil vo
 
 How to Connect
 -------
-Darbcoin is somewhat lacking in nodes, so you might have to run the client with `-addnode=darbcoin.myanimelife.net` to get it to work. You can do this with both the command-line and graphical clients. On Windows, just run the `Darbcoin-connect.bat` file, and it'll automatically run Darbcoin with the correct arguments. Darbcoin uses TCP port 3553, so open that port if you want others to able to connect to you.
+Darbcoin is somewhat lacking in nodes, so you might have to run the client with `-addnode=darbcoin.myanimelife.net` to get it to work. You can do this with both the command-line and graphical clients. On Windows, just run the `darbcoin-connect.bat` file, and it'll automatically run Darbcoin with the correct arguments. Darbcoin uses TCP port 3553, so open that port if you want others to able to connect to you.
 
 How to Mine
 -------
@@ -39,7 +39,7 @@ To mine with your GPU, create a file called `darbcoin.conf` in `%appdata%/Darbco
     rpcuser=[USERNAME]
     rpcpassword=[PASSWORD]
 
-Then run the Darbcoin client with -server (this is automatically done in `Darbcoin-connect.bat`), which will start a JSON-RPC server on port 3552. ~~Then, pick a Litecoin mining application of your choice ([GUIMiner-scrypt](https://bitcointalk.org/index.php?topic=150331.0) works, make sure to set 'Use stratum' to No), and point it to `localhost:3552` with the username and password you specified in `darbcoin.conf`. It should work, hopefully.~~ Actually, I don't think this works at least at the moment. I have a feeling that cgminer doesn't like working with a network difficulty of 0.00024414. If you can get GPU mining to work, let me know.
+Then run the Darbcoin client with -server (this is automatically done in `darbcoin-json-rpc.bat`), which will start a JSON-RPC server on port 3552. ~~Then, pick a Litecoin mining application of your choice ([GUIMiner-scrypt](https://bitcointalk.org/index.php?topic=150331.0) works, make sure to set 'Use stratum' to No), and point it to `localhost:3552` with the username and password you specified in `darbcoin.conf`. It should work, hopefully.~~ Actually, I don't think this works at least at the moment. I have a feeling that cgminer doesn't like working with a network difficulty of 0.00024414. If you can get GPU mining to work, let me know.
 
 License
 -------
