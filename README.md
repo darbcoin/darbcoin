@@ -13,7 +13,7 @@ Darbcoin is somewhat lacking in nodes, so you might have to run the client with 
 
 How to Mine
 -------
-You can mine using your CPU with miner built into the client either through the graphical client, or in the console client using the command 'setgenerate true ##' where ## is the number of threads you want to use.
+You can mine using your CPU with miner built into the client either through the graphical client, or in the console client using the command `setgenerate true [# Threads]`.
 
 To mine with your GPU, create a file called `darbcoin.conf` in `%appdata%/Darbcoin` (Windows) or `~/.darbcoin` (Linux) containing:
 
