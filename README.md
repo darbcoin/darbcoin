@@ -5,20 +5,20 @@ Darbcoin is this really, really... kind of cryptocoin. It uses scrypt as a proof
 
 How to Build (for Debian based Linux)
 -------
-1. Get the dependencies
+First, get the dependencies:
 
     sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb5.1-dev libdb5.1++-dev qt-sdk libminiupnpc-dev
 
-2. Download the source. For the rest of the steps, we'll assume it's stored in ``~/darbcoin`
+Download the source. We'll assume it's stored in ``~/darbcoin`.
 
-3. To build the command-line client (darbcoind):
+To build the command-line client (darbcoind):
 
     cd ~/darbcoin/src
     make -f makefile.unix "USE_UPNP=-"
     
-4. To build the graphical client (darbcoin-qt):
+To build the graphical client (darbcoin-qt):
 
-    cd ~/darbcoin
+    cd ~/darbcoin`
     qmake "USE_UPNP=-"
     make
 
