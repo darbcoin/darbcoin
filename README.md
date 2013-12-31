@@ -3,6 +3,8 @@ Darbcoin (DEI)
 
 Darbcoin is this really, really... kind of cryptocoin. It uses scrypt as a proof-of-work algorithm. 3553 Darbcoins are generated approximately every minute, for all time (probably).
 
+[Darbcoin Block Chain Explore](http://darbcoin.myanimelife.net:2750/)
+
 How to Build (for Debian based Linux)
 -------
 First, get the dependencies:
@@ -42,6 +44,23 @@ To mine with your GPU, create a file called `darbcoin.conf` in `%appdata%/Darbco
     rpcpassword=[PASSWORD]
 
 Then run the Darbcoin client with -server (this is automatically done in `darbcoin-json-rpc.bat`), which will start a JSON-RPC server on port 3552. ~~Then, pick a Litecoin mining application of your choice ([GUIMiner-scrypt](https://bitcointalk.org/index.php?topic=150331.0) works, make sure to set 'Use stratum' to No), and point it to `localhost:3552` with the username and password you specified in `darbcoin.conf`. It should work, hopefully.~~ Actually, I don't think this works at least at the moment. I have a feeling that cgminer doesn't like working with a network difficulty of 0.00024414. If you can get GPU mining to work, let me know.
+
+GPU Mining on Nvidia GPUs with CUDA (thanks Greg!)
+
+Set up the darbcoin wallet client to work with cudaminer by adding a file "darbcoin.conf" to %appdata%/darbcoin, with the contents:
+
+    server=1
+    daemon=1
+    rpcuser=miner
+    rpcpassword=password
+    rpcallowip=127.0.0.1
+    rpcallowip=192.168.*.*
+    
+And invoking cudaminer with: 
+cudaminer -o 127.0.0.1:3552 -O miner:password
+(or alternatively, whatever IP gets you to the host with the wallet running, but make sure the IP is allowed in the darbcoin.conf file)
+
+If cudaminer gives you an error saying it doesn't detect a CUDA driver, install the [CUDA development kit](https://developer.nvidia.com/cuda-downloads).
 
 License
 -------
